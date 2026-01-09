@@ -155,7 +155,7 @@ export const AIInsights = () => {
             {/* Terminal Modal */}
             {isOpen && (
                 <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/20 dark:bg-black/60 backdrop-blur-sm animate-fade-in">
-                    <div className="w-full max-w-lg bg-[#F8F7FF] dark:bg-black/40 backdrop-blur-xl border border-primary/20 dark:border-white/10 rounded-2xl overflow-hidden flex flex-col h-[450px] shadow-2xl transition-all duration-300">
+                    <div className="w-[calc(100%-2rem)] sm:w-full max-w-lg bg-[#F8F7FF] dark:bg-black/40 backdrop-blur-xl border border-primary/20 dark:border-white/10 rounded-2xl overflow-hidden flex flex-col max-h-[85vh] h-[450px] shadow-2xl transition-all duration-300">
                         {/* Header */}
                         <div className="flex items-center justify-between px-4 py-3 border-b border-primary/10 dark:border-white/10 bg-primary/5 dark:bg-white/5">
                             <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider text-primary">

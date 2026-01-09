@@ -59,9 +59,9 @@ export const AboutSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-border">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 pt-8 border-t border-border">
               {aboutData.stats.map((stat, index) => (
-                <div key={index}>
+                <div key={index} className="text-center sm:text-left">
                   <div className="font-display text-3xl font-bold text-foreground">{stat.value}</div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </div>

@@ -30,7 +30,7 @@ export const ProjectsSection = () => {
               className="glass-card-elevated group overflow-hidden hover:-translate-y-2 transition-all duration-300"
             >
               {/* Icon Header */}
-              <div className={`p - 8 bg - gradient - to - br ${project.gradient} `}>
+              <div className={`p-6 sm:p-8 bg-gradient-to-br ${project.gradient}`}>
                 <div className="w-16 h-16 rounded-2xl bg-card/80 backdrop-blur-sm flex items-center justify-center shadow-card group-hover:scale-110 transition-transform duration-300">
                   <project.icon className="w-8 h-8 text-primary" />
                 </div>

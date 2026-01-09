@@ -19,7 +19,7 @@ export const HeroSection = () => {
       <div className="relative z-10 container-custom text-center">
         <div className="max-w-4xl mx-auto">
           {/* Name */}
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-up opacity-0 delay-100 tracking-tight whitespace-nowrap">
+          <h1 className="font-display text-2xl xs:text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-up opacity-0 delay-100 tracking-tight whitespace-nowrap">
             {siteConfig.name}
           </h1>
 
