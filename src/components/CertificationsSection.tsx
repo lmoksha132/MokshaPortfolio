@@ -2,8 +2,12 @@ import { Award, CheckCircle, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { certifications } from '@/data';
 import { SectionBackground } from './SectionBackground';
+import { useState } from 'react';
+import { CertificateDialog } from './CertificateDialog';
 
 export const CertificationsSection = () => {
+  const [selectedCert, setSelectedCert] = useState<{ title: string; link: string } | null>(null);
+
   return (
     <section id="certifications" className="section-padding relative overflow-hidden">
       <SectionBackground />
@@ -52,11 +56,14 @@ export const CertificationsSection = () => {
                           Featured
                         </span>
                       </div>
-                      <Button variant="outline" size="sm" asChild className="hidden sm:flex">
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          View Certificate
-                        </a>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="hidden sm:flex"
+                        onClick={() => setSelectedCert({ title: cert.title, link: cert.link })}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Certificate
                       </Button>
                     </div>
                     <p className="text-primary font-medium mb-3">{cert.issuer}</p>
@@ -75,11 +82,14 @@ export const CertificationsSection = () => {
                           </span>
                         ))}
                       </div>
-                      <Button variant="outline" size="sm" asChild className="sm:hidden w-full">
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          View Certificate
-                        </a>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="sm:hidden w-full"
+                        onClick={() => setSelectedCert({ title: cert.title, link: cert.link })}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View Certificate
                       </Button>
                     </div>
                   </div>
@@ -108,17 +118,28 @@ export const CertificationsSection = () => {
                       <p className="text-muted-foreground text-sm">{cert.description}</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" asChild className="w-full text-primary hover:text-primary hover:bg-primary/10">
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Certificate
-                    </a>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-full text-primary hover:text-primary hover:bg-primary/10"
+                    onClick={() => setSelectedCert({ title: cert.title, link: cert.link })}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Certificate
                   </Button>
                 </div>
               ))}
           </div>
         </div>
       </div>
+
+      {/* Certificate Viewer Modal */}
+      <CertificateDialog
+        isOpen={selectedCert !== null}
+        onOpenChange={(open) => !open && setSelectedCert(null)}
+        title={selectedCert?.title || ''}
+        url={selectedCert?.link || ''}
+      />
     </section>
   );
 };
