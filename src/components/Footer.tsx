@@ -14,12 +14,8 @@ export const Footer = () => {
             {siteConfig.name}
           </a>
 
-          <p className="text-sm text-muted-foreground text-center">
-            Designed and Developed by {siteConfig.name}
-          </p>
-
-          <p className="text-sm text-muted-foreground">
-            {currentYear}
+          <p className="text-sm text-muted-foreground text-center md:text-right">
+            © Lakshmimoksha Boya 2026
           </p>
         </div>
       </div>
