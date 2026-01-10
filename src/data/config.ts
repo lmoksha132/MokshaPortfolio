@@ -7,8 +7,8 @@ export const siteConfig: SiteConfig = {
     title: 'Aspiring Software Engineer | AI & Data Science',
     subtitle: 'Developer',
     description: 'A driven Computer Science graduate with a strong academic foundation, SAP ABAP Global Certification, and hands-on experience building innovative software and AI-powered solutions.',
-    resumeFileName: 'Lakshmi_Moksha_Boya_Resume.pdf',
-    resumePath: '/Lakshmi_Moksha_Boya_Resume.pdf',
+    resumeFileName: 'moksha_resume_.pdf',
+    resumePath: '/moksha_resume_.pdf',
     contactEmail: 'lakshmimoksha.132@gmail.com',
     socials: {
         linkedin: 'https://www.linkedin.com/in/lakshmi-moksha-boya-77bb9b294/',
