@@ -15,7 +15,7 @@ export const Footer = () => {
           </a>
 
           <p className="text-sm text-muted-foreground text-center md:text-right">
-            © Lakshmimoksha Boya 2026
+            © Lakshmi Moksha Boya 2026
           </p>
         </div>
       </div>
